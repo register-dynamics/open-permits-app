@@ -1,0 +1,142 @@
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: system-ui, sans-serif;
+  overflow: hidden;
+}
+
+video {
+  background: black;
+}
+
+.scene {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.scene.default, .scene:target {
+  display: block;
+}
+
+footer {
+  position: fixed;
+  padding: 0.5em;
+  width: 100%;
+  bottom: 0;
+  background: #1f6b41;
+  color: white;
+  font-size: 9pt;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer a {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+footer a span {
+  display: block;
+  font-size: 20px;
+  margin: 0 auto 4px;
+}
+
+.tray {
+  top: 100vh;
+  height: 100%;
+  width: 100%;
+  background: white;
+  position: fixed;
+  transition: top 0.6s ease;
+  z-index: 2;
+}
+
+.tray.shown {
+  top: 0vh;
+}
+
+.title {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 18px;
+  border-bottom: 1px solid lightgray;
+  padding: 0.8em 0;
+  background: #ededed;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#close {
+  border: none;
+  background: none;
+  font: inherit;
+  font-weight: 700;
+  color: #1f6b41;
+  position: absolute;
+  top: 1.0em;
+  right: 1.0em;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 2em;
+  overflow-y: scroll;
+  height: calc(100% - 45px);
+  box-sizing: border-box;
+}
+
+.list > div {
+  margin-bottom: 1.5em;
+}
+
+.list h2 {
+  margin-top: 0;
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  border-bottom: 1px solid #ededed;
+}
+
+.list span {
+  font-size: 26px;
+}
+
+#proof {
+  margin: 1em;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #ededed;
+  padding: 0.5em;
+}
+
+#proof::before {
+  content: "Verifying...";
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#proof.verified-false {
+  background-color: #e48484;
+}
+#proof.verified-true {
+  background-color: #72e882;
+}
+#proof.verified-false::before {
+  content: "Item could not be verified.";
+}
+#proof.verified-true::before {
+  content: "Item verified successfully.";
+}

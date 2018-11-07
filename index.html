@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Registers Item Prover</title>
+  <script type="text/javascript" src="https://bitwiseshiftleft.github.io/sjcl/sjcl.js"></script>
+  <script type="text/javascript" src="./qr_packed.js"></script>
+  <script type="text/javascript" src="./merkle-tree.js"></script>
+  <script type="text/javascript" src="./proof-app.js"></script>
+  <script type="text/javascript">//<![CDATA[
+    window.rootHashes = {
+      'broadband-engineer': 'ynscTCZJEpQB5PX2JYo1zNLyOe55bLj46gmXll6dny8='
+    }
+  //]]></script>
+  <link rel="stylesheet" href="https://jonathantneal.github.io/system-font-css/system-font.css" />
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" />
+  <link rel="stylesheet" href="./proof-app.css" />
+</head>
+
+<body>
+  <div id="history" class="scene">
+    <h1 class="title">Scan History</h1>
+    <div class="list"></div>
+  </div>
+  <div id="settings" class="scene"></div>
+  <video autoplay="true" id="scanner" class="scene default"></video>
+  <div class="tray" id="results">
+    <h1 class="title" id="title"></h1><button id="close">Done</button>
+    <div id="proof"></div>
+    <div id="data" class="list"></div>
+  </div>
+  <footer>
+    <a href="#history"><span class="lnr lnr-list"></span>History</a>
+    <a href="#scanner"><span class="lnr lnr-magnifier"></span>Scan</a>
+    <a href="#settings"><span class="lnr lnr-cog"></span>Settings</a>
+  </footer>
+</body>
+
+</html>
